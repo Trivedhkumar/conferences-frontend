@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Londrina+Solid&family=Russo+One&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  color: #333;
+  text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.app .app-header{
+  text-align:center ;
+  background-color: #FF5733;
+  font-family: 'Alfa Slab One', cursive;
+  color: #fff;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+ 
+}
+.search-filter{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.app .app-header input{
+display: flex;
+justify-content: flex-end;
+padding: 0.5rem;
+}
+.app .app-header .search-filter{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 0.3rem;
+}
+.app .app-header .search-filter .filters{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.app .app-header .search-filter .search{
+  display: flex;
+}
+.app .app-header .search-filter .search button{
+  cursor: pointer;
+  padding: 0.3rem;
+}
+.app .app-header .search-filter .filters .filter{
+  padding: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width:460px){
+  .main{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .app .app-header .search-filter{
+    flex-direction: column;
   }
 }
